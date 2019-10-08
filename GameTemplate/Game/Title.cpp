@@ -15,7 +15,7 @@ bool Title::Start()
 	//CSpritRenderのインスタンスを作成
 	m_spritRender = NewGO<prefab::CSpriteRender>(0);
 	//タイトル画面のロード
-	m_spritRender->Init(L"../Assets/Sprit/Title.dds", 0, 0);
+	m_spritRender->Init(L"../Assets/Sprite/Title.dds", 1280.0f, 720.0f);
 	return true;
 }
 
