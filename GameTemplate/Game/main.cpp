@@ -136,6 +136,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 	//エンジンを初期化。
 	if (Engine().Init(initParam) == true) {
 		NewGO<Game>(0, nullptr);
+
+
 		//ゲームループを実行。
 		Engine().RunGameLoop();
 	}
