@@ -19,6 +19,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -26,6 +29,9 @@
     </CLInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Title.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -41,5 +47,10 @@
     <ImageContentTask Include="Assets\sprite\dummy.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\Title.png">
+      <Filter>Assets\sprite</Filter>
+    </Image>
   </ItemGroup>
 </Project>
