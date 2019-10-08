@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Title.h"
+#include "Game.h"
 
 Title::Title()
 {
@@ -23,7 +24,9 @@ void Title::Update()
 {
 	if (Pad(0).IsTrigger(enButtonStart)) {
 		//スタートボタンでゲームシーンへ移動
-		
+		NewGO<Game>(0, "gameSecen");
+
+		DeleteGO(this);
 	}
 	
 }
