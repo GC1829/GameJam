@@ -1766,6 +1766,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
@@ -1795,6 +1796,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
@@ -1812,14 +1814,6 @@
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\Title.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\modelData\kabe2.jpg" />
-    <Image Include="Assets\modelData\kabe3.jpg" />
-    <Image Include="Assets\modelData\sand1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\modelData\Map.cmo" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
