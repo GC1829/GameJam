@@ -28,7 +28,7 @@ bool Enemy::Start()
 	//スキンモデルレンダーのインスタンスの作成
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
 	//スキンモデルレンダーのロード
-	m_skinModelRender->Init(L"../Assets/modelData/Enemy2.cmo");
+	m_skinModelRender->Init(L"../Assets/modelData/Enemy1.cmo");
 	m_position = { -1000.0f, 0.0f, 1000.0f };
 	m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender->SetScale({ 5.0f, 5.0f, 5.0f });
@@ -48,26 +48,17 @@ void Enemy::Update()
 		m_targetPointNo1++;
 	}
 	toNext.Normalize();
-	m_position += toNext * 10.0f;
+	m_position += toNext * 10.f;
 	
+	
+
 	//Countが5になったら立ち止まる
-	Count++;
-
-	if (Count == 5) {
-
-		
-		
-
-		timer += GameTime().GetFrameDeltaTime();
-		switch (timer > 3.0f) {
-
-		case1:
-			
-			Count = 0;
-				break;
-		}
+	timer += GameTime().GetFrameDeltaTime();
+	if (timer > 3.0f) {
 
 	}
+
+	
 
 	//座標をスキンモデルレンダラーに反映させる。
 	m_skinModelRender->SetPosition(m_position);
