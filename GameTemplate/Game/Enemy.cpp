@@ -16,7 +16,7 @@ bool Enemy::Start()
 	//スキンモデルレンダーのインスタンスの作成
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
 	//スキンモデルレンダーのロード
-	m_skinModelRender->Init(L"");
+	m_skinModelRender->Init(L"../Assets/modelData/Enemy.cmo");
 
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
@@ -39,7 +39,7 @@ void Enemy::Update()
 	
 	
 
-	/*if (m_Count == 6) {
+	/*if (m_Count == 5) {
 
 		m_position.x = 0;
 		m_position.y = 0;

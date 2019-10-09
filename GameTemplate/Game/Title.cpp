@@ -58,13 +58,13 @@ void Title::Update()
 			Color.z += 0.003f;
 		}
 		else {
-			Colorjoutai = 0;
+			Colorjoutai = 2;
 		}
 	}
 	
 	
 
-	if (Pad(0).IsTrigger(enButtonStart)) {
+	if (Pad(0).IsPressAnyKey()) {
 		//スタートボタンでゲームシーンへ移動
 		NewGO<Game>(0, "game");
 
