@@ -31,6 +31,8 @@ bool Title::Start()
 
 void Title::Update()
 {
+	m_fontRender->SetColor(Color);
+
 	if (Colorjoutai == 0) {
 		if (Color.x >= 0.0f) {
 			Color.x -= 0.003f;
@@ -60,7 +62,8 @@ void Title::Update()
 		}
 	}
 	
-	m_fontRender->SetColor(Color);
+	
+
 	if (Pad(0).IsTrigger(enButtonStart)) {
 		//スタートボタンでゲームシーンへ移動
 		NewGO<Game>(0, "game");
