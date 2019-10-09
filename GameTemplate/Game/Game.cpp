@@ -17,7 +17,7 @@ Game::~Game()
 }
 bool Game::Start()
 {
-	NewGO<Enemy>(0, "enemy");
+	//NewGO<Enemy>(0, "enemy");
 	return 0;
 }
 void Game::Update()
