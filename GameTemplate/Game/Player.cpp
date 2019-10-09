@@ -19,7 +19,6 @@ bool Player::Start()
 
 void Player::Update()
 {
-	if (Pad(0).IsPress(enButtonUp)) {
-		m_position.x += 100.0f;
-	}
+	m_position.x += Pad(0).GetLStickXF() * -150.0f;
+	m_skinModelRender->SetPosition(m_position);
 }

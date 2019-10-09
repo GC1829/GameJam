@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "Enemy.h"
+#include "Enemy2.h"
 
 #include "tkEngine/light/tkDirectionLight.h"
 
@@ -22,7 +23,7 @@ bool Game::Start()
 }
 void Game::Update()
 {
-	QueryGOs<Enemy>("enemy", [&](Enemy* enemy) {
+	/*QueryGOs<Enemy>("enemy", [&](Enemy* enemy) {
 		//•Ç‚É’×‚³‚ê‚½‚Æ‚«‚ÉEnemy‚ğÁ‚·
 
 		DeleteGO(enemy);
@@ -39,6 +40,6 @@ void Game::Update()
 			return true;
 		}
 		return true;
-		});
+		});*/
 
 }
