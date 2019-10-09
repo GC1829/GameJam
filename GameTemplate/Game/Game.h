@@ -7,6 +7,7 @@
 
 #include "Map.h"
 #include "Player.h"
+#include "Enemy.h"
 #include "Enemy2.h"
 
 class Game : public IGameObject
@@ -20,6 +21,7 @@ public:
 	Map* m_map = nullptr;
 	Player* m_player = nullptr;
 	Enemy2* m_enemy2 = nullptr;
+	Enemy* enemy = nullptr;
 
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 

@@ -25,11 +25,45 @@ bool Title::Start()
 	//Fontのロード
 	m_fontRender->SetText(L"Press Start Button");
 
+
 	return true;
 }
 
 void Title::Update()
 {
+	m_fontRender->SetColor(Color);
+
+	if (Colorjoutai == 0) {
+		if (Color.x >= 0.0f) {
+			Color.x -= 0.003f;
+		}
+		else if (Color.y >= 0.0f) {
+			Color.y -= 0.003f;
+		}
+		else if (Color.z >= 0.0f) {
+			Color.z -= 0.003f;
+		}
+		else {
+			Colorjoutai = 1;
+		}
+	}
+	else if (Colorjoutai == 1) {
+		if (Color.x <= 1.0f) {
+			Color.x += 0.003f;
+		}
+		else if (Color.y <= 1.0f) {
+			Color.y += 0.003f;
+		}
+		else if (Color.z <= 1.0f) {
+			Color.z += 0.003f;
+		}
+		else {
+			Colorjoutai = 0;
+		}
+	}
+	
+	
+
 	if (Pad(0).IsTrigger(enButtonStart)) {
 		//スタートボタンでゲームシーンへ移動
 		NewGO<Game>(0, "game");
