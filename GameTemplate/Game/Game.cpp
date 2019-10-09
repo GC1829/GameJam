@@ -8,8 +8,8 @@ Game::Game()
 {
 	m_camera = NewGO<Camera>(0);
 	m_map = NewGO<Map>(0);
-	m_player = NewGO<Player>(0);
-	//m_enemy2 = NewGO<Enemy2>(0);
+	//m_player = NewGO<Player>(0);
+	m_enemy2 = NewGO<Enemy2>(0);
 }
 
 Game::~Game()
@@ -17,7 +17,7 @@ Game::~Game()
 }
 bool Game::Start()
 {
-	NewGO<Enemy>(0, "enemy");
+	//NewGO<Enemy>(0, "enemy");
 	return 0;
 }
 void Game::Update()
