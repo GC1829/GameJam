@@ -12,7 +12,7 @@ Enemy::~Enemy()
 
 bool Enemy::Start()
 {
-	
+
 	//スキンモデルレンダーのインスタンスの作成
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
 	//スキンモデルレンダーのロード
