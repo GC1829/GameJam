@@ -13,6 +13,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Map.fbx" />
@@ -27,6 +28,7 @@
     <CLInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Title.h" />
+    <ClInclude Include="Enemy2.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc" />
