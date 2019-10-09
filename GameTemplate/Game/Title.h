@@ -9,5 +9,6 @@ public:
 	void Update();
 
 	prefab::CSpriteRender* m_spritRender = nullptr;
+	prefab::CFontRender* m_fontRender = nullptr;
 };
 

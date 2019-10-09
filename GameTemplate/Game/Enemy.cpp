@@ -15,7 +15,7 @@ bool Enemy::Start()
 	//スキンモデルレンダーのインスタンスの作成
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy2");
 	//スキンモデルレンダーのロード
-	//m_skinModelRender->Init(L"");
+	m_skinModelRender->Init(L"../Assets/modelData/UnityChan.cmo");
 
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
@@ -26,12 +26,28 @@ bool Enemy::Start()
 
 void Enemy::Update()
 {
+	m_position.y += 1.0f;
+	m_Count++;
+
 	/*if (kado[0] == m_position) {
-		m_moveSpeed.y = 0.0f;
+		m_position.y = 0.0f;
 		
-		m_moveSpeed.x += 1.0f;
+		m_position.x += 1.0f;
 		qRot.SetRotationDeg(CVector3::AxisY, 90.0f);
 	}*/
 
-	m_moveSpeed.y += 1.0f;
+	if (m_Count == 6) {
+
+		m_position.x = 0;
+		m_position.y = 0;
+		m_position.z = 0;
+
+		m_timer += GameTime().GetFrameDeltaTime();
+		switch(m_timer > 1.5f) {
+
+		default:
+			break;
+		}
+
+	}
 }

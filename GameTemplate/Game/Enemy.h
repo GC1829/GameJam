@@ -15,8 +15,10 @@ public:
 	CVector3 m_moveSpeed = CVector3::Zero;
 	//移動速度
 
-	int m_timer = 0;
 	//タイマー
+	int m_timer = 0;
+	
+	int m_Count = 0;
 
 	//CVector3 kado = {0, 0, 0};
 };
