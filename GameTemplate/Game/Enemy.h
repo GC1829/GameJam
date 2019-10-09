@@ -21,5 +21,7 @@ public:
 	int m_Count = 0;
 
 	//CVector3 kado = {0, 0, 0};
+
+	CCharacterController m_charaCon;		//キャラクターコントローラー。
 };
 

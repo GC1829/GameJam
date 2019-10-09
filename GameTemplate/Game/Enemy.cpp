@@ -12,8 +12,9 @@ Enemy::~Enemy()
 
 bool Enemy::Start()
 {
+	
 	//スキンモデルレンダーのインスタンスの作成
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy2");
+	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
 	//スキンモデルレンダーのロード
 	m_skinModelRender->Init(L"../Assets/modelData/UnityChan.cmo");
 
@@ -26,8 +27,8 @@ bool Enemy::Start()
 
 void Enemy::Update()
 {
-	m_position.y += 1.0f;
-	m_Count++;
+	//m_position.y -= 1.0f;
+	//m_Count++;
 
 	/*if (kado[0] == m_position) {
 		m_position.y = 0.0f;
@@ -35,8 +36,10 @@ void Enemy::Update()
 		m_position.x += 1.0f;
 		qRot.SetRotationDeg(CVector3::AxisY, 90.0f);
 	}*/
+	
+	
 
-	if (m_Count == 6) {
+	/*if (m_Count == 6) {
 
 		m_position.x = 0;
 		m_position.y = 0;
@@ -46,8 +49,12 @@ void Enemy::Update()
 		switch(m_timer > 1.5f) {
 
 		default:
+		m_Count = 0
 			break;
 		}
 
-	}
+	}*/
+
+	//座標をスキンモデルレンダラーに反映させる。
+	m_skinModelRender->SetPosition(m_position);
 }

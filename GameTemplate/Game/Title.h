@@ -10,5 +10,8 @@ public:
 
 	prefab::CSpriteRender* m_spritRender = nullptr;
 	prefab::CFontRender* m_fontRender = nullptr;
+	CVector3 Color = { 1.0f, 1.0f, 1.0f };
+	int Colorjoutai = 0;
+	
 };
 
