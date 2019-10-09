@@ -19,5 +19,7 @@ bool Player::Start()
 
 void Player::Update()
 {
-
+	if (Pad(0).IsPress(enButtonUp)) {
+		m_position.x += 100.0f;
+	}
 }

@@ -1815,14 +1815,6 @@
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\Title.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\modelData\kabe2.jpg" />
-    <Image Include="Assets\modelData\kabe3.jpg" />
-    <Image Include="Assets\modelData\sand1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\modelData\Map.cmo" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />
