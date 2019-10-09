@@ -9,10 +9,10 @@ FBXHeaderExtension:  {
 		Year: 2019
 		Month: 10
 		Day: 9
-		Hour: 14
-		Minute: 5
-		Second: 28
-		Millisecond: 567
+		Hour: 23
+		Minute: 25
+		Second: 38
+		Millisecond: 259
 	}
 	Creator: "FBX SDK/FBX Plugins version 2019.2"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -34,15 +34,15 @@ FBXHeaderExtension:  {
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2020"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "09/10/2019 05:05:28.566"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "09/10/2019 14:25:38.257"
 			P: "Original|FileName", "KString", "", "", "C:\Users\GC201924\Desktop\GameJam\GameTemplate\Game\Assets\modelData\Enemy1.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2020"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "09/10/2019 05:05:28.566"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "09/10/2019 14:25:38.257"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\GC201924\Documents\3ds Max 2020"
-			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\GC201924\Desktop\Enemy1.max"
+			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\GC201924\Desktop\Enemy2.max"
 		}
 	}
 }
@@ -60,7 +60,7 @@ GlobalSettings:  {
 		P: "UnitScaleFactor", "double", "Number", "",1
 		P: "OriginalUnitScaleFactor", "double", "Number", "",1
 		P: "AmbientColor", "ColorRGB", "Color", "",0,0,0
-		P: "DefaultCamera", "KString", "", "", "Producer Perspective"
+		P: "DefaultCamera", "KString", "", "", "Producer Front"
 		P: "TimeMode", "enum", "", "",6
 		P: "TimeProtocol", "enum", "", "",2
 		P: "SnapOnFrameMode", "enum", "", "",0
@@ -77,7 +77,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 2872601779744, "", "Scene" {
+	Document: 1379351260112, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -315,10 +315,10 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	NodeAttribute: 2872531269280, "NodeAttribute::", "Null" {
+	NodeAttribute: 1378891065808, "NodeAttribute::", "Null" {
 		TypeFlags: "Null"
 	}
-	Geometry: 2872595162800, "Geometry::", "Mesh" {
+	Geometry: 1379356076032, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",1,1,1
 		}
@@ -414,7 +414,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 2872595152464, "Geometry::", "Mesh" {
+	Geometry: 1379356072768, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",1,1,1
 		}
@@ -510,7 +510,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 2872595166608, "Geometry::", "Mesh" {
+	Geometry: 1379356075488, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.105882352941176,0.694117647058824,0.345098039215686
 		}
@@ -606,7 +606,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 2872595137776, "Geometry::", "Mesh" {
+	Geometry: 1379356097792, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.345098039215686,0.564705882352941,0.882352941176471
 		}
@@ -702,7 +702,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 2872595148112, "Geometry::", "Mesh" {
+	Geometry: 1379356098880, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.345098039215686,0.564705882352941,0.882352941176471
 		}
@@ -798,7 +798,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 2872595169872, "Geometry::", "Mesh" {
+	Geometry: 1379356094528, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.345098039215686,0.564705882352941,0.882352941176471
 		}
@@ -894,7 +894,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 2872594970720, "Model::Enemy", "Null" {
+	Model: 1379016633440, "Model::Enemy", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -906,7 +906,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 2872594942224, "Model::Box001", "Mesh" {
+	Model: 1379016679472, "Model::Box001", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -918,7 +918,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 2872594972912, "Model::Box002", "Mesh" {
+	Model: 1379016666320, "Model::Box002", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -930,7 +930,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 2872594959760, "Model::Box003", "Mesh" {
+	Model: 1379016668512, "Model::Box003", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -942,7 +942,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 2872594975104, "Model::Box005", "Mesh" {
+	Model: 1379016670704, "Model::Box005", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -955,7 +955,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 2872594955376, "Model::Box004", "Mesh" {
+	Model: 1379016664128, "Model::Box004", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -967,7 +967,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 2872594953184, "Model::Box006", "Mesh" {
+	Model: 1379016672896, "Model::Box006", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -980,7 +980,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 2872535098768, "Material::Material #26", "" {
+	Material: 1379355831264, "Material::Material #31", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -1002,7 +1002,7 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	Material: 2872535098288, "Material::Material #25", "" {
+	Material: 1379355808704, "Material::Material #36", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -1024,7 +1024,7 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	Material: 2872535099728, "Material::Material #27", "" {
+	Material: 1379355821184, "Material::Material #33", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -1046,7 +1046,7 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	Material: 2872535089648, "Material::Material #28", "" {
+	Material: 1379355802944, "Material::Material #34", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -1068,7 +1068,7 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	Material: 2872535119408, "Material::Material #29", "" {
+	Material: 1379355807264, "Material::Material #35", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -1090,143 +1090,143 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	Video: 2872535091088, "Video::マップ #2", "Clip" {
+	Video: 1379355803424, "Video::マップ #7", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Pictures\Saved Pictures\huku1.jpg"
-			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\..\Pictures\Saved Pictures\huku1.jpg"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhuku.jpg"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhuku.jpg"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\GC201924\Pictures\Saved Pictures\huku1.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\huku1.jpg"
+		Filename: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhuku.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhuku.jpg"
 	}
-	Video: 2872535105008, "Video::マップ #1", "Clip" {
+	Video: 1379355819744, "Video::マップ #12", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Pictures\Saved Pictures\huku2.jpg"
-			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\..\Pictures\Saved Pictures\huku2.jpg"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemy2huku.jpg"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemy2huku.jpg"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\GC201924\Pictures\Saved Pictures\huku2.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\huku2.jpg"
+		Filename: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemy2huku.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemy2huku.jpg"
 	}
-	Video: 2872535113648, "Video::マップ #3", "Clip" {
+	Video: 1379355828384, "Video::マップ #9", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+		Filename: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 	}
-	Video: 2872535118448, "Video::マップ #4", "Clip" {
+	Video: 1379355820224, "Video::マップ #10", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+		Filename: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 	}
-	Video: 2872535114128, "Video::マップ #5", "Clip" {
+	Video: 1379355830304, "Video::マップ #11", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+		Filename: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 	}
-	Texture: 2872535111728, "Texture::マップ #2", "" {
+	Texture: 1379355826944, "Texture::マップ #7", "" {
 		Type: "TextureVideoClip"
 		Version: 202
-		TextureName: "Texture::マップ #2"
+		TextureName: "Texture::マップ #7"
 		Properties70:  {
 			P: "UVSet", "KString", "", "", "UVChannel_1"
 			P: "UseMaterial", "bool", "", "",1
 		}
-		Media: "Video::マップ #2"
-		FileName: "C:\Users\GC201924\Pictures\Saved Pictures\huku1.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\huku1.jpg"
+		Media: "Video::マップ #7"
+		FileName: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhuku.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhuku.jpg"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "Alpha_Black"
 		Cropping: 0,0,0,0
 	}
-	Texture: 2872535103568, "Texture::マップ #1", "" {
+	Texture: 1379355805344, "Texture::マップ #12", "" {
 		Type: "TextureVideoClip"
 		Version: 202
-		TextureName: "Texture::マップ #1"
+		TextureName: "Texture::マップ #12"
 		Properties70:  {
 			P: "UVSet", "KString", "", "", "UVChannel_1"
 			P: "UseMaterial", "bool", "", "",1
 		}
-		Media: "Video::マップ #1"
-		FileName: "C:\Users\GC201924\Pictures\Saved Pictures\huku2.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\huku2.jpg"
+		Media: "Video::マップ #12"
+		FileName: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemy2huku.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemy2huku.jpg"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "Alpha_Black"
 		Cropping: 0,0,0,0
 	}
-	Texture: 2872535118928, "Texture::マップ #3", "" {
+	Texture: 1379355817824, "Texture::マップ #9", "" {
 		Type: "TextureVideoClip"
 		Version: 202
-		TextureName: "Texture::マップ #3"
+		TextureName: "Texture::マップ #9"
 		Properties70:  {
 			P: "UVSet", "KString", "", "", "UVChannel_1"
 			P: "UseMaterial", "bool", "", "",1
 		}
-		Media: "Video::マップ #3"
-		FileName: "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+		Media: "Video::マップ #9"
+		FileName: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "Alpha_Black"
 		Cropping: 0,0,0,0
 	}
-	Texture: 2872535100688, "Texture::マップ #4", "" {
+	Texture: 1379355813024, "Texture::マップ #10", "" {
 		Type: "TextureVideoClip"
 		Version: 202
-		TextureName: "Texture::マップ #4"
+		TextureName: "Texture::マップ #10"
 		Properties70:  {
 			P: "UVSet", "KString", "", "", "UVChannel_1"
 			P: "UseMaterial", "bool", "", "",1
 		}
-		Media: "Video::マップ #4"
-		FileName: "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+		Media: "Video::マップ #10"
+		FileName: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "Alpha_Black"
 		Cropping: 0,0,0,0
 	}
-	Texture: 2872535102608, "Texture::マップ #5", "" {
+	Texture: 1379355826464, "Texture::マップ #11", "" {
 		Type: "TextureVideoClip"
 		Version: 202
-		TextureName: "Texture::マップ #5"
+		TextureName: "Texture::マップ #11"
 		Properties70:  {
 			P: "UVSet", "KString", "", "", "UVChannel_1"
 			P: "UseMaterial", "bool", "", "",1
 		}
-		Media: "Video::マップ #5"
-		FileName: "C:\Users\GC201924\Pictures\Saved Pictures\hada.jpg"
-		RelativeFilename: "..\..\..\..\..\..\Pictures\Saved Pictures\hada.jpg"
+		Media: "Video::マップ #11"
+		FileName: "C:\Users\GC201924\Desktop\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
+		RelativeFilename: "..\..\..\..\..\GameJam - コピー\GameTemplate\Game\Assets\modelData\Enemyhada.jpg"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "Alpha_Black"
 		Cropping: 0,0,0,0
 	}
-	AnimationStack: 2872530142512, "AnimStack::Take 001", "" {
+	AnimationStack: 1379350418528, "AnimStack::Take 001", "" {
 		Properties70:  {
 			P: "LocalStop", "KTime", "Time", "",153953860000
 			P: "ReferenceStop", "KTime", "Time", "",153953860000
 		}
 	}
-	AnimationLayer: 2872518369280, "AnimLayer::BaseLayer", "" {
+	AnimationLayer: 1378888422560, "AnimLayer::BaseLayer", "" {
 	}
 }
 
@@ -1236,97 +1236,97 @@ Objects:  {
 Connections:  {
 	
 	;Model::Enemy, Model::RootNode
-	C: "OO",2872594970720,0
+	C: "OO",1379016633440,0
 	
 	;AnimLayer::BaseLayer, AnimStack::Take 001
-	C: "OO",2872518369280,2872530142512
+	C: "OO",1378888422560,1379350418528
 	
 	;Model::Box001, Model::Enemy
-	C: "OO",2872594942224,2872594970720
+	C: "OO",1379016679472,1379016633440
 	
 	;Model::Box002, Model::Enemy
-	C: "OO",2872594972912,2872594970720
+	C: "OO",1379016666320,1379016633440
 	
 	;Model::Box003, Model::Enemy
-	C: "OO",2872594959760,2872594970720
+	C: "OO",1379016668512,1379016633440
 	
 	;Model::Box005, Model::Enemy
-	C: "OO",2872594975104,2872594970720
+	C: "OO",1379016670704,1379016633440
 	
 	;Model::Box004, Model::Enemy
-	C: "OO",2872594955376,2872594970720
+	C: "OO",1379016664128,1379016633440
 	
 	;Model::Box006, Model::Enemy
-	C: "OO",2872594953184,2872594970720
+	C: "OO",1379016672896,1379016633440
 	
 	;NodeAttribute::, Model::Enemy
-	C: "OO",2872531269280,2872594970720
+	C: "OO",1378891065808,1379016633440
 	
-	;Material::Material #26, Model::Box001
-	C: "OO",2872535098768,2872594942224
+	;Material::Material #31, Model::Box001
+	C: "OO",1379355831264,1379016679472
 	
 	;Geometry::, Model::Box001
-	C: "OO",2872595162800,2872594942224
+	C: "OO",1379356076032,1379016679472
 	
-	;Material::Material #26, Model::Box002
-	C: "OO",2872535098768,2872594972912
+	;Material::Material #31, Model::Box002
+	C: "OO",1379355831264,1379016666320
 	
 	;Geometry::, Model::Box002
-	C: "OO",2872595152464,2872594972912
+	C: "OO",1379356072768,1379016666320
 	
-	;Material::Material #25, Model::Box003
-	C: "OO",2872535098288,2872594959760
+	;Material::Material #36, Model::Box003
+	C: "OO",1379355808704,1379016668512
 	
 	;Geometry::, Model::Box003
-	C: "OO",2872595166608,2872594959760
+	C: "OO",1379356075488,1379016668512
 	
-	;Material::Material #27, Model::Box005
-	C: "OO",2872535099728,2872594975104
+	;Material::Material #33, Model::Box005
+	C: "OO",1379355821184,1379016670704
 	
 	;Geometry::, Model::Box005
-	C: "OO",2872595137776,2872594975104
+	C: "OO",1379356097792,1379016670704
 	
-	;Material::Material #28, Model::Box004
-	C: "OO",2872535089648,2872594955376
+	;Material::Material #34, Model::Box004
+	C: "OO",1379355802944,1379016664128
 	
 	;Geometry::, Model::Box004
-	C: "OO",2872595148112,2872594955376
+	C: "OO",1379356098880,1379016664128
 	
-	;Material::Material #29, Model::Box006
-	C: "OO",2872535119408,2872594953184
+	;Material::Material #35, Model::Box006
+	C: "OO",1379355807264,1379016672896
 	
 	;Geometry::, Model::Box006
-	C: "OO",2872595169872,2872594953184
+	C: "OO",1379356094528,1379016672896
 	
-	;Texture::マップ #2, Material::Material #26
-	C: "OP",2872535111728,2872535098768, "DiffuseColor"
+	;Texture::マップ #7, Material::Material #31
+	C: "OP",1379355826944,1379355831264, "DiffuseColor"
 	
-	;Video::マップ #2, Texture::マップ #2
-	C: "OO",2872535091088,2872535111728
+	;Video::マップ #7, Texture::マップ #7
+	C: "OO",1379355803424,1379355826944
 	
-	;Texture::マップ #1, Material::Material #25
-	C: "OP",2872535103568,2872535098288, "DiffuseColor"
+	;Texture::マップ #12, Material::Material #36
+	C: "OP",1379355805344,1379355808704, "DiffuseColor"
 	
-	;Video::マップ #1, Texture::マップ #1
-	C: "OO",2872535105008,2872535103568
+	;Video::マップ #12, Texture::マップ #12
+	C: "OO",1379355819744,1379355805344
 	
-	;Texture::マップ #3, Material::Material #27
-	C: "OP",2872535118928,2872535099728, "DiffuseColor"
+	;Texture::マップ #9, Material::Material #33
+	C: "OP",1379355817824,1379355821184, "DiffuseColor"
 	
-	;Video::マップ #3, Texture::マップ #3
-	C: "OO",2872535113648,2872535118928
+	;Video::マップ #9, Texture::マップ #9
+	C: "OO",1379355828384,1379355817824
 	
-	;Texture::マップ #4, Material::Material #28
-	C: "OP",2872535100688,2872535089648, "DiffuseColor"
+	;Texture::マップ #10, Material::Material #34
+	C: "OP",1379355813024,1379355802944, "DiffuseColor"
 	
-	;Video::マップ #4, Texture::マップ #4
-	C: "OO",2872535118448,2872535100688
+	;Video::マップ #10, Texture::マップ #10
+	C: "OO",1379355820224,1379355813024
 	
-	;Texture::マップ #5, Material::Material #29
-	C: "OP",2872535102608,2872535119408, "DiffuseColor"
+	;Texture::マップ #11, Material::Material #35
+	C: "OP",1379355826464,1379355807264, "DiffuseColor"
 	
-	;Video::マップ #5, Texture::マップ #5
-	C: "OO",2872535114128,2872535102608
+	;Video::マップ #11, Texture::マップ #11
+	C: "OO",1379355830304,1379355826464
 }
 ;Takes section
 ;----------------------------------------------------
