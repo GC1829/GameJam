@@ -12,5 +12,6 @@ public:
 	
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_moveSpeed = CVector3::Zero;
+	int m_targetPointNo = 0;
 };
 
