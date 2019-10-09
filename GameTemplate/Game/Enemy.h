@@ -15,13 +15,9 @@ public:
 	CVector3 m_moveSpeed = CVector3::Zero;
 	//移動速度
 
-	//タイマー
-	int m_timer = 0;
+	int m_targetPointNo1 = 0;
 	
-	int m_Count = 0;
-
-	//CVector3 kado = {0, 0, 0};
-
-	CCharacterController m_charaCon;		//キャラクターコントローラー。
+	int Count = 0;
+	int timer = 0;
 };
 
