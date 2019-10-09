@@ -22,6 +22,7 @@
     <ClCompile Include="Title.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Map.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -32,6 +33,7 @@
     <ClInclude Include="Title.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Map.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -42,15 +44,15 @@
     <MeshContentTask Include="Assets\modelData\unityChan.fbx">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Map.fbx" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\sprite\Title.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
+    <ImageContentTask Include="Assets\sprite\Title.png" />
+    <ImageContentTask Include="Assets\modelData\kabe2.jpg">
+      <Filter>Resource Files</Filter>
+    </ImageContentTask>
   </ItemGroup>
 </Project>

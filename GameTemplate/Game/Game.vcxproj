@@ -1767,6 +1767,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -1793,6 +1794,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -1800,6 +1802,7 @@
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
+    <MeshContentTask Include="Assets\modelData\Map.fbx" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
   <ItemGroup>
@@ -1807,6 +1810,9 @@
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\modelData\kabe2.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

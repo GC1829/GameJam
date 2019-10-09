@@ -5,6 +5,7 @@
 Game::Game()
 {
 	m_camera = NewGO<Camera>(0);
+	m_map = NewGO<Map>(0);
 }
 
 Game::~Game()
