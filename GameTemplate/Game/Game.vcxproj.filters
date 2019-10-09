@@ -23,6 +23,7 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Enemy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -34,6 +35,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Enemy.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -54,5 +56,7 @@
     <ImageContentTask Include="Assets\modelData\kabe2.jpg">
       <Filter>Resource Files</Filter>
     </ImageContentTask>
+  </ItemGroup>
+    <ImageContentTask Include="Assets\sprite\Title.png" />
   </ItemGroup>
 </Project>

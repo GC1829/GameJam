@@ -13,6 +13,7 @@ Title::~Title()
 
 bool Title::Start()
 {
+
 	//CSpritRenderのインスタンスを作成
 	m_spritRender = NewGO<prefab::CSpriteRender>(0);
 	//タイトル画面のロード
@@ -24,7 +25,7 @@ void Title::Update()
 {
 	if (Pad(0).IsTrigger(enButtonStart)) {
 		//スタートボタンでゲームシーンへ移動
-		NewGO<Game>(0, "gameSecen");
+		NewGO<Game>(0, "game");
 
 		DeleteGO(this);
 	}
