@@ -13,6 +13,7 @@ Title::~Title()
 
 bool Title::Start()
 {
+
 	//CSpritRenderのインスタンスを作成
 	m_spritRender = NewGO<prefab::CSpriteRender>(0);
 	//タイトル画面のロード

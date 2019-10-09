@@ -5,14 +5,11 @@
 Game::Game()
 {
 	m_camera = NewGO<Camera>(0);
+	m_player = NewGO<Player>(0);
 }
 
 Game::~Game()
 {
-}
-bool Game::Start()
-{
-	return 0;
 }
 void Game::Update()
 {
