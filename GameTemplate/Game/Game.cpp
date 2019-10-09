@@ -16,4 +16,5 @@ bool Game::Start()
 }
 void Game::Update()
 {
+	
 }
