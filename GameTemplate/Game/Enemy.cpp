@@ -29,7 +29,7 @@ bool Enemy::Start()
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
 	//スキンモデルレンダーのロード
 	m_skinModelRender->Init(L"../Assets/modelData/Enemy1.cmo");
-	m_position = { -1000.0f, 0.0f, 1000.0f };
+	//m_position = { -1000.0f, 0.0f, 1000.0f };
 	//m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender->SetScale({ 10.0f, 10.0f, 10.0f });
 	//スキンモデルに回転クォータニオンを設定する
@@ -51,8 +51,6 @@ void Enemy::Update()
 		}
 		toNext.Normalize();
 		m_position += toNext * 10.f;
-
-		//Countが5になったら立ち止まる
 		Count++;
 
 		if (Count == 50) {

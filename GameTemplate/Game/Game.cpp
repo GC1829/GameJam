@@ -3,6 +3,7 @@
 #include "Enemy.h"
 #include "Enemy2.h"
 #include "TakaraBako.h"
+#include "EnemyGenerator.h"
 #include "tkEngine/light/tkDirectionLight.h"
 
 Game::Game()
@@ -10,8 +11,8 @@ Game::Game()
 	m_camera = NewGO<Camera>(0);
 	m_map = NewGO<Map>(0);
 	m_player = NewGO<Player>(0);
-	m_enemy2 = NewGO<Enemy2>(0);
-	enemy = NewGO<Enemy>(0);
+	//m_enemy2 = NewGO<Enemy2>(0);
+	NewGO<EnemyGenerator>(0);
 	m_takarabako = NewGO<TakaraBako>(0);
 }
 
