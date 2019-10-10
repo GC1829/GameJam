@@ -1,9 +1,9 @@
 #pragma once
-class Player : public IGameObject
+class Player2 : public IGameObject
 {
 public:
-	Player();
-	~Player();
+	Player2();
+	~Player2();
 	bool Start();
 	void Update();
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
@@ -12,4 +12,5 @@ public:
 	CVector3 m_movespeed = CVector3::Zero;
 	CCharacterController m_Characon;
 };
+
 

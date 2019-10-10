@@ -13,7 +13,7 @@ TakaraBako::TakaraBako()
 
 TakaraBako::~TakaraBako()
 {
-
+	DeleteGO(m_skinModelRender);
 }
 
 void TakaraBako::Update()
