@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Enemy.h"
+#include "Player.h"
+#include "Player3.h"
+#include "Player2.h"
 
 CVector3 targetPoints1[9] = {
 	{-195.300f, 0.0f, -195.000f},
@@ -35,6 +38,7 @@ bool Enemy::Start()
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
 	m_skinModelRender->SetRotation(qRot);
+	m_player = FindGO<Player>(0, "player");
 
 	return true;
 }
