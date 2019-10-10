@@ -30,8 +30,8 @@ bool Enemy::Start()
 	//スキンモデルレンダーのロード
 	m_skinModelRender->Init(L"../Assets/modelData/Enemy1.cmo");
 	m_position = { -1000.0f, 0.0f, 1000.0f };
-	m_skinModelRender->SetPosition(m_position);
-	m_skinModelRender->SetScale({ 5.0f, 5.0f, 5.0f });
+	//m_skinModelRender->SetPosition(m_position);
+	m_skinModelRender->SetScale({ 10.0f, 10.0f, 10.0f });
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
 	m_skinModelRender->SetRotation(qRot);
@@ -46,17 +46,17 @@ void Enemy::Update()
 	if (toNext.Length() < 10.0f) {
 		//次のポイントに行く。
 		m_targetPointNo1++;
+		Sleep(1 * 1000);
 	}
 	toNext.Normalize();
 	m_position += toNext * 10.f;
 	
-	
 
-	//Countが5になったら立ち止まる
-	timer += GameTime().GetFrameDeltaTime();
-	if (timer > 5.0f) {
-		Sleep(1 * 1000);
-	}
+	////Countが5になったら立ち止まる
+	//timer += GameTime().GetFrameDeltaTime();
+	//if (timer > 3.0f) {
+
+	//}
 
 	
 

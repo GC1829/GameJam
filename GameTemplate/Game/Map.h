@@ -5,5 +5,6 @@ public:
 	Map();
 	~Map();
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;
+	CPhysicsStaticObject m_PS;
 };
 
