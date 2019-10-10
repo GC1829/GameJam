@@ -28,8 +28,15 @@ bool Enemy2::Start()
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy1");
 	m_skinModelRender->Init(L"modelData/Enemy2.cmo");
 	m_position = { -1000.0f, 0.0f, 1000.0f };
-	//m_skinModelRender->SetPosition(m_position);
+	m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender->SetScale({ 5.0f, 5.0f, 5.0f });
+	//m_skinModelRender->m_position.x = -185.154f;
+	//m_skinModelRender->m_position.y = 207.712f;
+	//m_skinModelRender->m_position.z = 0.0f;
+	//m_position.x = -185.154f;
+	//m_position.y = 207.712f;
+	//m_position.z = 0.0f;
+	//m_skinModelRender->SetPosition(m_position);
 	CQuaternion qRot;
 	m_skinModelRender->SetRotation(qRot);
 	return true;
