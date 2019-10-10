@@ -41,34 +41,54 @@ bool Enemy::Start()
 
 void Enemy::Update()
 {
-	if (state == 0) {
-		//動いているとき
-		//次の移動先に向かうベクトルを計算する。
-		CVector3 toNext = targetPoints1[m_targetPointNo1] * 5.3f - m_position;
-		if (toNext.Length() < 10.0f) {
-			//次のポイントに行く。
-			m_targetPointNo1++;
-		}
-		toNext.Normalize();
-		m_position += toNext * 10.f;
 
-		//Countが5になったら立ち止まる
-		Count++;
-
-		if (Count == 50) {
-			state = 1;
-			Count = 0;
-		}
+	//次の移動先に向かうベクトルを計算する。
+	CVector3 toNext = targetPoints1[m_targetPointNo1] * 5.3f - m_position;
+	if (toNext.Length() < 10.0f) {
+		//次のポイントに行く。
+		m_targetPointNo1++;
 	}
-	else if(state==1) {
-		//止まっているとき
-		Count2++;
+	toNext.Normalize();
+	m_position += toNext * 10.f;
 
-		if (Count2 == 50) {
-			state = 0;
-			Count2 = 0;
+
+
+	//Countが50になったら立ち止まる
+	Count++;
+
+	if (Count == 50) {
+
+
+		if (state == 0) {
+			//動いているとき
+			//次の移動先に向かうベクトルを計算する。
+			CVector3 toNext = targetPoints1[m_targetPointNo1] * 5.3f - m_position;
+			if (toNext.Length() < 10.0f) {
+				//次のポイントに行く。
+				m_targetPointNo1++;
+			}
+			toNext.Normalize();
+			m_position += toNext * 10.f;
+
+			//Countが5になったら立ち止まる
+			Count++;
+
+			if (Count == 50) {
+				state = 1;
+				Count = 0;
+			}
 		}
+		else if (state == 1) {
+			//止まっているとき
+			Count2++;
+
+
+			if (Count2 == 50) {
+				state = 0;
+				Count2 = 0;
+			}
+		}
+		//座標をスキンモデルレンダラーに反映させる。
+		m_skinModelRender->SetPosition(m_position);
 	}
-	//座標をスキンモデルレンダラーに反映させる。
-	m_skinModelRender->SetPosition(m_position);
 }
