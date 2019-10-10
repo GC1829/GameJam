@@ -98,8 +98,6 @@ void Title::Update()
 	
 
 	if (Pad(0).IsPressAnyKey()) {
-		//スタートボタンでゲームシーンへ移動
-		NewGO<Game>(0, "game");
 
 		prefab::CSoundSource* sound = NewGO<prefab::CSoundSource>(0);
 		//asioto.wav
@@ -109,6 +107,12 @@ void Title::Update()
 		//ワンショット再生
 		sound->Play(false);
 
+
+
+		//スタートボタンでゲームシーンへ移動
+		NewGO<Game>(0, "game");
+
+		
 
 		DeleteGO(this);
 	}

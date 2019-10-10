@@ -13,5 +13,6 @@ public:
 	CVector3 Color = { 1.0f, 1.0f, 1.0f };
 	int Colorjoutai = 0;
 	
+	int timer = 0;
 };
 
