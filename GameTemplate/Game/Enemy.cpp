@@ -57,22 +57,22 @@ void Enemy::Update()
 		m_position += toNext * 10.f;
 		Count++;
 
-			if (Count == 50) {
-				state = 1;
-				Count = 0;
-			}
+		if (Count == 50) {
+			state = 1;
+			Count = 0;
 		}
-		else if (state == 1) {
-			//止まっているとき
-			Count2++;
-
-
-			if (Count2 == 50) {
-				state = 0;
-				Count2 = 0;
-			}
-		}
-		//座標をスキンモデルレンダラーに反映させる。
-		m_skinModelRender->SetPosition(m_position);
 	}
+	else if (state == 1) {
+		//止まっているとき
+		Count2++;
+
+
+		if (Count2 == 50) {
+			state = 0;
+			Count2 = 0;
+		}
+
+}
+	//座標をスキンモデルレンダラーに反映させる。
+	m_skinModelRender->SetPosition(m_position);
 }

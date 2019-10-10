@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "EnemyGenerator.h"
 #include "Enemy.h"
-#include "Enemy2.h"
 
 EnemyGenerator::EnemyGenerator()
 {
