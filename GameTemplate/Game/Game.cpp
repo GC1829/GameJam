@@ -12,7 +12,7 @@ Game::Game()
 	m_player = NewGO<Player>(0);
 	m_enemy2 = NewGO<Enemy2>(0);
 	enemy = NewGO<Enemy>(0);
-	//m_takarabako = NewGO<TakaraBako>(0);
+	m_takarabako = NewGO<TakaraBako>(0);
 }
 
 Game::~Game()

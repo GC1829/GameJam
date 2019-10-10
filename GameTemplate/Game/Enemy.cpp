@@ -46,7 +46,6 @@ void Enemy::Update()
 	if (toNext.Length() < 10.0f) {
 		//次のポイントに行く。
 		m_targetPointNo1++;
-		Sleep(1 * 1000);
 	}
 	toNext.Normalize();
 	m_position += toNext * 10.f;
@@ -59,11 +58,11 @@ void Enemy::Update()
 	//Countが5になったら立ち止まる
 	Count++;
 
-	if (Count == 50) {
+	/*if (Count == 50) {
 		Sleep(1 * 1000);
 
 		Count = 0;
-	}
+	}*/
 	
 	//座標をスキンモデルレンダラーに反映させる。
 	m_skinModelRender->SetPosition(m_position);

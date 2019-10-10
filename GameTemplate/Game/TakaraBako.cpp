@@ -5,8 +5,10 @@
 TakaraBako::TakaraBako()
 {
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender->Init(L"modelData/unityChan.cmo");
+	m_skinModelRender->Init(L"modelData/Takarabako.cmo");
 	//m_game = FindGO<Game>("Game");
+	m_position = { 0.0f,0.0f,-100.0f };
+	m_skinModelRender->SetScale({ 3.0f,3.0f,3.0f });
 }
 
 TakaraBako::~TakaraBako()
@@ -31,4 +33,5 @@ void TakaraBako::Update()
 		}
 		return true;
 		});
+	m_skinModelRender->SetPosition(m_position);
 }
