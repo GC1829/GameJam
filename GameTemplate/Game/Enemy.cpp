@@ -37,7 +37,7 @@ bool Enemy::Start()
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
 	m_skinModelRender->SetRotation(qRot);
-	//m_player = FindGO<Player>(0, "player");
+	m_player = FindGO<Player>(0, "player");
 
 	return true;
 }
