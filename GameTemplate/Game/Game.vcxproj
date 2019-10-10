@@ -1832,8 +1832,8 @@
     <ImageContentTask Include="Assets\sprite\GAMECLAER.png" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="..\..\..\..\..\Downloads\asioto.mp3" />
-    <Media Include="..\..\..\..\..\Downloads\SandSound.mp3" />
+    <Media Include="Assets\sound\asioto.wav" />
+    <Media Include="Assets\sound\SandSound.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

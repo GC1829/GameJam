@@ -85,10 +85,10 @@
     <ImageContentTask Include="Assets\sprite\title.png" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="..\..\..\..\..\Downloads\asioto.mp3">
+    <Media Include="Assets\sound\asioto.wav">
       <Filter>Assets\sound</Filter>
     </Media>
-    <Media Include="..\..\..\..\..\Downloads\SandSound.mp3">
+    <Media Include="Assets\sound\SandSound.wav">
       <Filter>Assets\sound</Filter>
     </Media>
   </ItemGroup>
