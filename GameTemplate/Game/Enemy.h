@@ -20,6 +20,8 @@ public:
 	int m_targetPointNo1 = 0;
 	
 	int Count = 0;
+	int Count2 = 0;
 	int timer = 0;
+	int state = 0;
 };
 
