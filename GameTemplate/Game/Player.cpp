@@ -4,8 +4,9 @@
 Player::Player()
 {
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender->Init(L"modelData/unityChan.cmo");
-	m_position = { 500.0f,0.0f,0.0f };
+	m_skinModelRender->Init(L"modelData/Brock.cmo");
+	m_position = { 750.0f,0.0f,-200.0f };
+	m_skinModelRender->SetScale({ 5.0f,10.0f,30.0f });
 }
 
 Player::~Player()
