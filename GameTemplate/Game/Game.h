@@ -26,5 +26,8 @@ public:
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 
 	prefab::CSpriteRender* m_spritRender = nullptr;
+	CVector3 position = {0, 0, 0};
+
+	int takarabako = 1;
 };
 

@@ -23,9 +23,8 @@ bool Title::Start()
 	//CFontRenderのインスタンスを作成
 	m_fontRender = NewGO<prefab::CFontRender>(0, "Font");
 	//Fontのロード
-	m_fontRender->SetText(L"Press Start Button");
-
-
+	m_fontRender->SetText(L"PressAnykey");
+	
 	return true;
 }
 
@@ -61,12 +60,54 @@ void Title::Update()
 			Colorjoutai = 2;
 		}
 	}
+	else if (Colorjoutai == 2) {
+		if (Color.y >= 0.0f) {
+			Color.y -= 0.003f;
+		}
+		else {
+			Colorjoutai = 3;
+		}
+	}
+	else if (Colorjoutai == 3) {
+		if (Color.x >= 0.0f) {
+			Color.x -= 0.003f;
+		}
+		else if (Color.y <= 1.0f) {
+			Color.y += 0.003f;
+		}
+		else if (Color.z >= 0.0f) {
+			Color.z -= 0.003f;
+		}
+		else {
+			Colorjoutai = 4;
+		}
+	}
+	else if (Colorjoutai == 4) {
+		if (Color.x <= 1.0f) {
+			Color.x += 0.003f;
+		}
+		else if (Color.z <= 1.0f) {
+			Color.z += 0.003f;
+		}
+		else {
+			Colorjoutai = 0;
+		}
+	}
+	
 	
 	
 
 	if (Pad(0).IsPressAnyKey()) {
 		//スタートボタンでゲームシーンへ移動
 		NewGO<Game>(0, "game");
+
+		//prefab::CSoundSource* ss = NewGO<prefab::CSoundSource>(0);
+		////explosion.wav
+		//ss->Init("../Assets/sound/");
+		////うるさいので音を小さくする
+		//ss->SetVolume(0.05f);
+		////ワンショット再生
+		//ss->Play(false);
 
 
 		DeleteGO(this);
