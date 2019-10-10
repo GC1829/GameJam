@@ -25,7 +25,7 @@ public:
 	Player2* m_player2 = nullptr;
 	Player3* m_player3 = nullptr;
 	Enemy2* m_enemy2 = nullptr;
-	Enemy* enemy = nullptr;
+	Enemy* m_enemy = nullptr;
 	TakaraBako* m_takarabako = nullptr;
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 

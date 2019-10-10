@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Player3.h"
 #include "Player2.h"
+#include "EnemyGenerator.h"
 
 CVector3 targetPoints1[9] = {
 	{-195.300f, 0.0f, -195.000f},
@@ -32,13 +33,11 @@ bool Enemy::Start()
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
 	//スキンモデルレンダーのロード
 	m_skinModelRender->Init(L"../Assets/modelData/Enemy1.cmo");
-	//m_position = { -1000.0f, 0.0f, 1000.0f };
-	//m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender->SetScale({ 10.0f, 10.0f, 10.0f });
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
 	m_skinModelRender->SetRotation(qRot);
-	m_player = FindGO<Player>(0, "player");
+	//m_player = FindGO<Player>(0, "player");
 
 	return true;
 }
@@ -65,7 +64,6 @@ void Enemy::Update()
 	else if (state == 1) {
 		//止まっているとき
 		Count2++;
-
 
 		if (Count2 == 50) {
 			state = 0;
