@@ -10,7 +10,7 @@ Game::Game()
 	m_camera = NewGO<Camera>(0);
 	m_map = NewGO<Map>(0);
 	m_player = NewGO<Player>(0);
-	m_enemy2 = NewGO<Enemy2>(0);
+	//m_enemy2 = NewGO<Enemy2>(0);
 	enemy = NewGO<Enemy>(0);
 }
 
@@ -33,10 +33,10 @@ void Game::Update()
 	//	if (enemy == 0) {
 	//		//Enemyが0になったらGameClaerを表示
 	//		
-	//		//CSpritRenderのインスタンスを作成
-	//		m_spritRender = NewGO<prefab::CSpriteRender>(0);
-	//		//タイトル画面のロード
-	//		m_spritRender->Init(L"../Assets/sprite/GAMECLAER.dds", 500.0f, 360.0f);
+			////CSpritRenderのインスタンスを作成
+			//m_spritRender = NewGO<prefab::CSpriteRender>(0);
+			////タイトル画面のロード
+			//m_spritRender->Init(L"../Assets/sprite/GAMECLAER.dds", 500.0f, 360.0f);
 	//		m_spritRender->SetPosition(position);
 	//		position.x += 1.0f;
 	//		position.y += 1.0f;
