@@ -54,8 +54,8 @@ void Enemy::Update()
 
 	//Count‚ª5‚É‚È‚Á‚½‚ç—§‚¿Ž~‚Ü‚é
 	timer += GameTime().GetFrameDeltaTime();
-	if (timer > 3.0f) {
-
+	if (timer > 5.0f) {
+		Sleep(1 * 1000);
 	}
 
 	

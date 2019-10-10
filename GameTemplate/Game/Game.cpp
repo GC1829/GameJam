@@ -28,13 +28,13 @@ void Game::Update()
 
 	//	DeleteGO(enemy);
 	//	return true;
-	//	});
+	//	});1
 	//QueryGOs<Enemy>("enemy", [&](Enemy* enemy) {
 	//	if (enemy == 0) {
 	//		//Enemyが0になったらGameClaerを表示
 	//		
 	//		//CSpritRenderのインスタンスを作成
-			m_spritRender = NewGO<prefab::CSpriteRender>(0);
+	//		m_spritRender = NewGO<prefab::CSpriteRender>(0);
 	//		//タイトル画面のロード
 	//		m_spritRender->Init(L"../Assets/sprite/GAMECLAER.dds", 500.0f, 360.0f);
 	//		m_spritRender->SetPosition(position);
@@ -72,6 +72,7 @@ void Game::Update()
 	//	//タイトル画面のロード
 	//	m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
 	//}
+
 }
 
 
