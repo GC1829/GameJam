@@ -3,8 +3,8 @@
 
 Player::Player()
 {
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender->Init(L"modelData/unityChan.cmo");
+	/*m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
+	m_skinModelRender->Init(L"modelData/unityChan.cmo");*/
 }
 
 Player::~Player()
@@ -19,9 +19,6 @@ bool Player::Start()
 
 void Player::Update()
 {
-	if (Pad(0).IsPress(enButtonA))
-	{
-		m_position.x += 30.0f;
-	}
+	m_position = { 500.0f,0.0f,300.0f };
 	m_skinModelRender->SetPosition(m_position);
 }
