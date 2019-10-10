@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Player3.h"
 #include "Player2.h"
+#include "EnemyGenerator.h"
 
 CVector3 targetPoints1[9] = {
 	{-195.300f, 0.0f, -195.000f},
@@ -32,8 +33,6 @@ bool Enemy::Start()
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
 	//スキンモデルレンダーのロード
 	m_skinModelRender->Init(L"../Assets/modelData/Enemy1.cmo");
-	m_position = { -1000.0f, 0.0f, 1000.0f };
-	//m_skinModelRender->SetPosition(m_position);
 	m_skinModelRender->SetScale({ 10.0f, 10.0f, 10.0f });
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
@@ -45,54 +44,33 @@ bool Enemy::Start()
 
 void Enemy::Update()
 {
-
-	//次の移動先に向かうベクトルを計算する。
-	CVector3 toNext = targetPoints1[m_targetPointNo1] * 5.3f - m_position;
-	if (toNext.Length() < 10.0f) {
-		//次のポイントに行く。
-		m_targetPointNo1++;
-	}
-	toNext.Normalize();
-	m_position += toNext * 10.f;
-
-
-
-	//Countが50になったら立ち止まる
-	Count++;
-
-	if (Count == 50) {
-
-
-		if (state == 0) {
-			//動いているとき
-			//次の移動先に向かうベクトルを計算する。
-			CVector3 toNext = targetPoints1[m_targetPointNo1] * 5.3f - m_position;
-			if (toNext.Length() < 10.0f) {
-				//次のポイントに行く。
-				m_targetPointNo1++;
-			}
-			toNext.Normalize();
-			m_position += toNext * 10.f;
-
-			//Countが5になったら立ち止まる
-			Count++;
-
-			if (Count == 50) {
-				state = 1;
-				Count = 0;
-			}
+	if (state == 0) {
+		//動いているとき
+		//次の移動先に向かうベクトルを計算する。
+		CVector3 toNext = targetPoints1[m_targetPointNo1] * 5.3f - m_position;
+		if (toNext.Length() < 10.0f) {
+			//次のポイントに行く。
+			m_targetPointNo1++;
 		}
-		else if (state == 1) {
-			//止まっているとき
-			Count2++;
+		toNext.Normalize();
+		m_position += toNext * 10.f;
+		Count++;
 
-
-			if (Count2 == 50) {
-				state = 0;
-				Count2 = 0;
-			}
+		if (Count == 50) {
+			state = 1;
+			Count = 0;
 		}
-		//座標をスキンモデルレンダラーに反映させる。
-		m_skinModelRender->SetPosition(m_position);
 	}
+	else if (state == 1) {
+		//止まっているとき
+		Count2++;
+
+		if (Count2 == 50) {
+			state = 0;
+			Count2 = 0;
+		}
+
+}
+	//座標をスキンモデルレンダラーに反映させる。
+	m_skinModelRender->SetPosition(m_position);
 }
