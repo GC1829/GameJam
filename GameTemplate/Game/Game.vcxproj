@@ -1791,6 +1791,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Middle|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Low|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TakaraBako.cpp" />
     <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -1802,6 +1803,7 @@
     <ClInclude Include="Player.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TakaraBako.h" />
     <ClInclude Include="Title.h" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
@@ -1810,6 +1812,7 @@
     <MeshContentTask Include="Assets\modelData\Enemy1.fbx" />
     <MeshContentTask Include="Assets\modelData\Enemy2.fbx" />
     <MeshContentTask Include="Assets\modelData\Map.fbx" />
+    <MeshContentTask Include="Assets\modelData\Takarabako.fbx" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
   <ItemGroup>
