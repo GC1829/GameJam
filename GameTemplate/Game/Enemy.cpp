@@ -45,59 +45,34 @@ bool Enemy::Start()
 
 void Enemy::Update()
 {
-	//次の移動先に向かうベクトルを計算する。
-	CVector3 toNext = targetPoints1[m_targetPointNo1] * 5.3f - m_position;
-	if (toNext.Length() < 10.0f) {
-		//次のポイントに行く。
-		m_targetPointNo1++;
+	if (state == 0) {
+		//動いているとき
+		//次の移動先に向かうベクトルを計算する。
+		CVector3 toNext = targetPoints1[m_targetPointNo1] * 5.3f - m_position;
+		if (toNext.Length() < 10.0f) {
+			//次のポイントに行く。
+			m_targetPointNo1++;
+		}
+		toNext.Normalize();
+		m_position += toNext * 10.f;
+
+		//Countが5になったら立ち止まる
+		Count++;
+
+		if (Count == 50) {
+			state = 1;
+			Count = 0;
+		}
 	}
-	toNext.Normalize();
-	m_position += toNext * 10.f;
-	
+	else if(state==1) {
+		//止まっているとき
+		Count2++;
 
-	////Countが5になったら立ち止まる
-	//timer += GameTime().GetFrameDeltaTime();
-	//if (timer > 3.0f) {
-
-	//Countが5になったら立ち止まる
-	Count++;
-
-	/*if (Count == 50) {
-		Sleep(1 * 1000);
-
-		Count = 0;
-	}*/
-	QueryGOs<Player>("Player", [&](Player* m_player)->bool {
-		CVector3 diff = m_player->m_position - m_position;
-		if (diff.Length() < 30.0f) {
-			DeleteGO(this);
-			return false;
+		if (Count2 == 50) {
+			state = 0;
+			Count2 = 0;
 		}
-		return true;
-		});
-
-	/*CVector3 diff = m_player->m_position - m_position;
-	if (diff.Length() < 30.0f) {
-		DeleteGO(this);
-	}*/
-
-	QueryGOs<Player2>("Player2", [&](Player2* m_player2)->bool {
-		CVector3 diff = m_player2->m_position - m_position;
-		if (diff.Length() < 30.0f) {
-			DeleteGO(this);
-			return false;
-		}
-		return true;
-		});
-
-	QueryGOs<Player3>("Player3", [&](Player3* m_player3)->bool {
-		CVector3 diff = m_player3->m_position - m_position;
-		if (diff.Length() < 30.0f) {
-			DeleteGO(this);
-			return false;
-		}
-		return true;
-		});
+	}
 	//座標をスキンモデルレンダラーに反映させる。
 	m_skinModelRender->SetPosition(m_position);
 }

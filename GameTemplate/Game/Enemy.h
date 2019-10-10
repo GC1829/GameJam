@@ -22,9 +22,13 @@ public:
 	CVector3 m_moveSpeed = CVector3::Zero;
 	//ˆÚ“®‘¬“x
 
+	CQuaternion rotation = CQuaternion::Identity;
+
 	int m_targetPointNo1 = 0;
 	
 	int Count = 0;
+	int Count2 = 0;
 	int timer = 0;
+	int state = 0;
 };
 
