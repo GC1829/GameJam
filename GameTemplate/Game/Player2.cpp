@@ -1,33 +1,33 @@
 #include "stdafx.h"
-#include "Player.h"
+#include "Player2.h"
 
-Player::Player()
+Player2::Player2()
 {
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/Brock.cmo");
-	m_position = { 750.0f,0.0f,-200.0f };
-	m_skinModelRender->SetScale({ 5.0f,10.0f,30.0f });
+	m_position = { 0.0f,0.0f,-1100.0f };
+	m_skinModelRender->SetScale({15.0f,10.0f,5.0f });
 	m_Characon.Init(
-		20.0,			 
-		100.0f,			
-		m_position		
+		20.0,
+		100.0f,
+		m_position
 	);
 }
 
-Player::~Player()
+Player2::~Player2()
 {
 }
 
-bool Player::Start()
+bool Player2::Start()
 {
 
 	return true;
 }
 
-void Player::Update()
+void Player2::Update()
 {
-	if (Pad(0).IsPress(enButtonA)) {
-		m_position.x += 50.0f;
+	if (Pad(0).IsPress(enButtonX)) {
+		m_position.z += 20.0f;
 	}
 	/*if (Pad(0).IsPress(enButtonUp)) {
 		m_position.x -= 50.0f;

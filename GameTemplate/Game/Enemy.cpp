@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Enemy.h"
+#include "Player.h"
+#include "Player3.h"
+#include "Player2.h"
 
 CVector3 targetPoints1[9] = {
 	{-195.300f, 0.0f, -195.000f},
@@ -35,6 +38,7 @@ bool Enemy::Start()
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
 	m_skinModelRender->SetRotation(qRot);
+	m_player = FindGO<Player>(0, "player");
 
 	return true;
 }
@@ -63,7 +67,37 @@ void Enemy::Update()
 
 		Count = 0;
 	}*/
-	
+	QueryGOs<Player>("Player", [&](Player* m_player)->bool {
+		CVector3 diff = m_player->m_position - m_position;
+		if (diff.Length() < 30.0f) {
+			DeleteGO(this);
+			return false;
+		}
+		return true;
+		});
+
+	/*CVector3 diff = m_player->m_position - m_position;
+	if (diff.Length() < 30.0f) {
+		DeleteGO(this);
+	}*/
+
+	QueryGOs<Player2>("Player2", [&](Player2* m_player2)->bool {
+		CVector3 diff = m_player2->m_position - m_position;
+		if (diff.Length() < 30.0f) {
+			DeleteGO(this);
+			return false;
+		}
+		return true;
+		});
+
+	QueryGOs<Player3>("Player3", [&](Player3* m_player3)->bool {
+		CVector3 diff = m_player3->m_position - m_position;
+		if (diff.Length() < 30.0f) {
+			DeleteGO(this);
+			return false;
+		}
+		return true;
+		});
 	//座標をスキンモデルレンダラーに反映させる。
 	m_skinModelRender->SetPosition(m_position);
 }

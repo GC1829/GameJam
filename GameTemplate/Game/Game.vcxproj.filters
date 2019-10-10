@@ -32,6 +32,8 @@
     <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="TakaraBako.cpp" />
+    <ClCompile Include="Player2.cpp" />
+    <ClCompile Include="Player3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -46,6 +48,8 @@
     <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="TakaraBako.h" />
+    <ClInclude Include="Player2.h" />
+    <ClInclude Include="Player3.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -78,16 +82,6 @@
     </ImageContentTask>
     <ImageContentTask Include="Assets\sprite\GAMECLAER.png" />
     <ImageContentTask Include="Assets\sprite\GAMEOVER.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\sprite\title.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
-    <Image Include="Assets\sprite\GAMEOVER.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
-    <Image Include="Assets\sprite\GAMECLAER.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
+    <ImageContentTask Include="Assets\sprite\title.png" />
   </ItemGroup>
 </Project>
