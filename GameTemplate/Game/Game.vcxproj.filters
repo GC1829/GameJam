@@ -78,16 +78,14 @@
     </ImageContentTask>
     <ImageContentTask Include="Assets\sprite\GAMECLAER.png" />
     <ImageContentTask Include="Assets\sprite\GAMEOVER.png" />
+    <ImageContentTask Include="Assets\sprite\title.png" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Assets\sprite\title.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
-    <Image Include="Assets\sprite\GAMEOVER.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
-    <Image Include="Assets\sprite\GAMECLAER.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
+    <Media Include="..\..\..\..\..\Downloads\asioto.mp3">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="..\..\..\..\..\Downloads\SandSound.mp3">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>

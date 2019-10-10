@@ -46,21 +46,17 @@ void Enemy::Update()
 	if (toNext.Length() < 10.0f) {
 		//ŽŸ‚Ìƒ|ƒCƒ“ƒg‚És‚­B
 		m_targetPointNo1++;
-		Sleep(1 * 1000);
 	}
 	toNext.Normalize();
 	m_position += toNext * 10.f;
 	
 
-	////Count‚ª5‚É‚È‚Á‚½‚ç—§‚¿Ž~‚Ü‚é
-	//timer += GameTime().GetFrameDeltaTime();
-	//if (timer > 3.0f) {
-
-	//Count‚ª5‚É‚È‚Á‚½‚ç—§‚¿Ž~‚Ü‚é
+	
+	//Count‚ª50‚É‚È‚Á‚½‚ç—§‚¿Ž~‚Ü‚é
 	Count++;
 
 	if (Count == 50) {
-		Sleep(1 * 1000);
+		
 
 		Count = 0;
 	}

@@ -20,6 +20,12 @@ Game::~Game()
 }
 bool Game::Start()
 {
+	//BGMÄ¶
+	prefab::CSoundSource* Sound = NewGO<prefab::CSoundSource>(0, "soundsource");
+	Sound->Init(L"../Assets/sound/SandSound.wav");
+	//Sound->SetVolume(0.1f);
+	Sound->Play(true);
+
 	return true;
 }
 void Game::Update()
