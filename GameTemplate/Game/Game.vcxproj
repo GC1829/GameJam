@@ -1836,6 +1836,7 @@
     <ImageContentTask Include="Assets\sprite\GAMECLAER.png" />
   </ItemGroup>
   <ItemGroup>
+    <Media Include="Assets\sound\8bit.wav" />
     <Media Include="Assets\sound\asioto.wav" />
     <Media Include="Assets\sound\SandSound.wav" />
   </ItemGroup>
