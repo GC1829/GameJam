@@ -2,6 +2,7 @@
 #include "TakaraBako.h"
 #include "Game.h"
 #include "Enemy.h"
+#include "Enemy2.h"
 
 TakaraBako::TakaraBako()
 {
@@ -27,21 +28,19 @@ void TakaraBako::Update()
 	//	m_game->takarabako--;
 	//}
 
-	QueryGOs<Game>("Game", [&](Game* game)->bool {
-		CVector3 diff = m_enemy->m_position - m_position;
-		if (diff.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
+	//Game* game = FindGO<Game>("game");
+	//Enemy* enemy = FindGO<Enemy>("enemy");
+	//CVector3 diff = enemy->m_position - m_position;
+	//if (diff.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
 
-			m_game->takarabako--;
-		}
-		return true;
-		});
-	QueryGOs<Game>("Game", [&](Game* game)->bool {
-		CVector3 diff = m_enemy2->m_position - m_position;
-		if (diff.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
+	//	m_game->takarabako--;
+	//}
+	//Enemy2* enemy2 = FindGO<Enemy2>("enemy2");
+	//	CVector3 diff2 = enemy2->m_position - m_position;
+	//	if (diff2.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
 
-			m_game->takarabako--;
-		}
-		return true;
-		});
-	m_skinModelRender->SetPosition(m_position);
+	//		m_game->takarabako--;
+	//	}
+		m_skinModelRender->SetPosition(m_position);
+		
 }
