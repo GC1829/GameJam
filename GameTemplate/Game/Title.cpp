@@ -95,23 +95,22 @@ void Title::Update()
 			Colorjoutai = 0;
 		}
 	}
-	
-	m_scale->SetScale(scale);
 
-	if (j_scale = 0) {
-		scale += 0.05f;
-		if (scale >= 10.0f) {
+	if (j_scale == 0) {
+		scale += 0.005f;
+		if (scale >= 2.0f) {
 			j_scale = 1;
 		}
 
 	}
 	if (j_scale == 1) {
-		scale -= 0.05f;
-		if (scale <= 5.0f) {
+		scale -= 0.005f;
+		if (scale <= 1.0f) {
 			j_scale = 0;
 		}
 	}
 
+	m_fontRender->SetScale(scale);
 
 	if (Pad(0).IsPressAnyKey()) {
 

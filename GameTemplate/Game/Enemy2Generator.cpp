@@ -37,7 +37,7 @@ void Enemy2Generator::Update()
 	}
 	//エネミー生成中止
 	if (state == 1) {
-		DeleteGO(this);
+		
 	}
 
 }

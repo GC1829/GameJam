@@ -15,7 +15,8 @@ Game::Game()
 	m_player2 = NewGO<Player2>(0, "player2");
 	m_player3 = NewGO<Player3>(0,"player3");
 	m_takarabako = NewGO<TakaraBako>(0);
-	
+	NewGO<EnemyGenerator>(0);
+	NewGO <Enemy2Generator>(0);
 }
 
 Game::~Game()
@@ -34,13 +35,13 @@ bool Game::Start()
 }
 void Game::Update()
 {
-
+	
 	if (takarabako == 0)
 	{
 		//スプライトレンダーのインスタンスを作成
 		m_spritRender = NewGO<prefab::CSpriteRender>(0);
 		//タイトル画面のロード
-		//m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
+		m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
 	}
 	//QueryGOs<Enemy>("enemy", [&](Enemy* enemy) {
 	//	//壁に潰されたときにEnemyを消す
