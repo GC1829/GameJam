@@ -2,9 +2,9 @@
 #include "Game.h"
 #include "Enemy.h"
 #include "Enemy2.h"
-#include "TakaraBako.h"
 #include "EnemyGenerator.h"
 #include "Enemy2Generator.h"
+#include "TakaraBako.h"
 #include "tkEngine/light/tkDirectionLight.h"
 #include <Title.h>
 
@@ -44,11 +44,11 @@ bool Game::Start()
 void Game::Update()
 {
 	
-	if (takarabako == 0)
+	/*if (takarabako == 0)
 	{
-		//スプライトレンダーのインスタンスを作成
+		スプライトレンダーのインスタンスを作成
 		m_spritRender = NewGO<prefab::CSpriteRender>(0);
-		//タイトル画面のロード
+		タイトル画面のロード
 		m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
 	}
 
