@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Player2.h"
 #include "Player3.h"
+#include "Game.h"
 
 CVector3 targetPoints[9] = {
 	{-195.300f, 0.0f, -195.000f},
@@ -29,7 +30,7 @@ Enemy2::~Enemy2()
 bool Enemy2::Start()
 {
 	//壁にぶつかったら方向転換するだけのエネミー
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy2");
+	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/Enemy2.cmo");
 	m_position = { -1000.0f, 0.0f, 1400.0f };
 	m_skinModelRender->SetPosition(m_position);
@@ -55,18 +56,24 @@ void Enemy2::Update()
 		m_targetPointNo++;
 	}
 	toNext.Normalize();
-	m_position += toNext * 10.f;
+	m_position += toNext * 15.f;
+
+	Game* mm_game = FindGO<Game>("game");
+
 	CVector3 diff = m_player->m_position - m_position;
 	if (diff.Length() < 100.0f) {
 		DeleteGO(this);
+		mm_game->m_deleteClearCount++;
 	}
 	CVector3 diff2 = m_player2->m_position - m_position;
 	if (diff2.Length() < 100.0f) {
 		DeleteGO(this);
+		mm_game->m_deleteClearCount++;
 	}
 	CVector3 diff3 = m_player3->m_position - m_position;
 	if (diff3.Length() < 100.0f) {
 		DeleteGO(this);
+		mm_game->m_deleteClearCount++;
 	}
 	
 	m_skinModelRender->SetPosition(m_position);

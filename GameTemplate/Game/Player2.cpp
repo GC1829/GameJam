@@ -16,6 +16,7 @@ Player2::Player2()
 
 Player2::~Player2()
 {
+	DeleteGO(m_skinModelRender);
 }
 
 bool Player2::Start()

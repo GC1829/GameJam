@@ -33,6 +33,7 @@ public:
 	Enemy2Generator* m_enemy2generator = nullptr;
 	int m_deleteClearCount = 0;
 	bool m_clear = false;
+	int m_timer = 0;
 	
 
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
