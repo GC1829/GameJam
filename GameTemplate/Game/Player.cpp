@@ -8,7 +8,7 @@ Player::Player()
 	m_position = { 750.0f,0.0f,-200.0f };
 	m_skinModelRender->SetScale({ 5.0f,10.0f,30.0f });
 	m_Characon.Init(
-		20.0,			 
+		100.0,			 
 		100.0f,			
 		m_position		
 	);
@@ -29,6 +29,8 @@ void Player::Update()
 	if (Pad(0).IsPress(enButtonA)) {
 		m_position.x += 50.0f;
 	}
-	
+	if (Pad(0).IsPress(enButtonY)) {
+		m_position.x -= 50.0f;
+	}
 	m_skinModelRender->SetPosition(m_position);
 }

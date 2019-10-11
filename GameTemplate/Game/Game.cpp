@@ -11,8 +11,8 @@ Game::Game()
 	m_camera = NewGO<Camera>(0);
 	m_map = NewGO<Map>(0);
 	m_player = NewGO<Player>(0, "player");
-	m_player2 = NewGO<Player2>(0);
-	m_player3 = NewGO<Player3>(0);
+	m_player2 = NewGO<Player2>(0, "player2");
+	m_player3 = NewGO<Player3>(0,"player3");
 	m_takarabako = NewGO<TakaraBako>(0);
 	//m_enemy2 = NewGO<Enemy2>(0);
 	NewGO<EnemyGenerator>(0);
