@@ -29,8 +29,6 @@ void Player::Update()
 	if (Pad(0).IsPress(enButtonA)) {
 		m_position.x += 50.0f;
 	}
-	/*if (Pad(0).IsPress(enButtonUp)) {
-		m_position.x -= 50.0f;
-	}*/
+	
 	m_skinModelRender->SetPosition(m_position);
 }

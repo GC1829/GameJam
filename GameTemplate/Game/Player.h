@@ -11,5 +11,7 @@ public:
 	CVector3 m_scale = CVector3::Zero;
 	CVector3 m_movespeed = CVector3::Zero;
 	CCharacterController m_Characon;
+
+	int Count = 0;
 };
 
