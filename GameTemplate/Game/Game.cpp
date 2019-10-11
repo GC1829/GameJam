@@ -23,7 +23,7 @@ Game::Game()
 Game::~Game()
 {
 	DeleteGO(m_map);
-	DeleteGO(m_takarabako);
+    DeleteGO(m_takarabako);
 	DeleteGO(m_player);
 	DeleteGO(m_player2);
 	DeleteGO(m_player3);
@@ -44,13 +44,14 @@ bool Game::Start()
 void Game::Update()
 {
 	
-	/*if (takarabako == 0)
+	if (takarabako == 0)
 	{
-		スプライトレンダーのインスタンスを作成
+		//スプライトレンダーのインスタンスを作成
 		m_spritRender = NewGO<prefab::CSpriteRender>(0);
-		タイトル画面のロード
+		//タイトル画面のロード
 		m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
 	}
+
 
 	//QueryGOs<Enemy>("enemy", [&](Enemy* enemy) {
 	//	//壁に潰されたときにEnemyを消す
@@ -115,7 +116,7 @@ void Game::Update()
 	else {
 		//クリアしている。時
 		m_timer++;
-		if (m_timer == 240) {
+		if (m_timer == 200) {
 			//240フレーム経過したらタイトル画面に戻る。
 			NewGO<Title>(0);
 			DeleteGO(this);

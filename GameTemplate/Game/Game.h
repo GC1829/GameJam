@@ -34,6 +34,7 @@ public:
 	int m_deleteClearCount = 0;
 	bool m_clear = false;
 	int m_timer = 0;
+	int m_timer2 = 0;
 	
 
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
