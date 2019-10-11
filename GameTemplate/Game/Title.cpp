@@ -98,17 +98,21 @@ void Title::Update()
 	
 
 	if (Pad(0).IsPressAnyKey()) {
+
+		prefab::CSoundSource* sound = NewGO<prefab::CSoundSource>(0);
+		//asioto.wav
+		sound->Init(L"../Assets/sound/asioto.wav");
+		//うるさいので音を小さくする
+		//sound->SetVolume(0.05f);
+		//ワンショット再生
+		sound->Play(false);
+
+
+
 		//スタートボタンでゲームシーンへ移動
 		NewGO<Game>(0, "game");
 
-		//prefab::CSoundSource* ss = NewGO<prefab::CSoundSource>(0);
-		////explosion.wav
-		//ss->Init("../Assets/sound/");
-		////うるさいので音を小さくする
-		//ss->SetVolume(0.05f);
-		////ワンショット再生
-		//ss->Play(false);
-
+		
 
 		DeleteGO(this);
 	}

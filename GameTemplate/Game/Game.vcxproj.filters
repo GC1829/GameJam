@@ -32,6 +32,8 @@
     <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="TakaraBako.cpp" />
+    <ClCompile Include="EnemyGenerator.cpp" />
+    <ClCompile Include="Enemy2Generator.cpp" />
     <ClCompile Include="Player2.cpp" />
     <ClCompile Include="Player3.cpp" />
   </ItemGroup>
@@ -48,6 +50,8 @@
     <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="TakaraBako.h" />
+    <ClInclude Include="EnemyGenerator.h" />
+    <ClInclude Include="Enemy2Generator.h" />
     <ClInclude Include="Player2.h" />
     <ClInclude Include="Player3.h" />
   </ItemGroup>
@@ -83,5 +87,13 @@
     <ImageContentTask Include="Assets\sprite\GAMECLAER.png" />
     <ImageContentTask Include="Assets\sprite\GAMEOVER.png" />
     <ImageContentTask Include="Assets\sprite\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\sound\asioto.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\SandSound.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>

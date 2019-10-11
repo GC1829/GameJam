@@ -3,6 +3,7 @@
 #include "Enemy.h"
 #include "Enemy2.h"
 #include "TakaraBako.h"
+#include "EnemyGenerator.h"
 #include "tkEngine/light/tkDirectionLight.h"
 
 Game::Game()
@@ -12,17 +13,24 @@ Game::Game()
 	m_player = NewGO<Player>(0, "player");
 	m_player2 = NewGO<Player2>(0);
 	m_player3 = NewGO<Player3>(0);
-	m_enemy2 = NewGO<Enemy2>(0);
-	enemy = NewGO<Enemy>(0);
 	m_takarabako = NewGO<TakaraBako>(0);
+	//m_enemy2 = NewGO<Enemy2>(0);
+	NewGO<EnemyGenerator>(0);
+	
 }
 
 Game::~Game()
 {
-	DeleteGO(enemy);
+	DeleteGO(m_enemy);
 }
 bool Game::Start()
 {
+	//BGMçƒê∂
+	prefab::CSoundSource* Sound = NewGO<prefab::CSoundSource>(0, "soundsource");
+	Sound->Init(L"../Assets/sound/SandSound.wav");
+	//Sound->SetVolume(0.1f);
+	Sound->Play(true);
+
 	return true;
 }
 void Game::Update()
