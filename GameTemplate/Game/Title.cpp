@@ -98,7 +98,7 @@ void Title::Update()
 	
 	m_scale->SetScale(scale);
 
-	if (j_scale = 0) {
+	if (j_scale == 0) {
 		scale += 0.05f;
 		if (scale >= 10.0f) {
 			j_scale = 1;
