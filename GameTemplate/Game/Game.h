@@ -27,6 +27,9 @@ public:
 	Enemy2* m_enemy2 = nullptr;
 	Enemy* m_enemy = nullptr;
 	TakaraBako* m_takarabako = nullptr;
+	
+	
+
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
 
 	prefab::CSpriteRender* m_spritRender = nullptr;
