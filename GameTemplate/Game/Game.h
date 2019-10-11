@@ -31,6 +31,8 @@ public:
 	TakaraBako* m_takarabako = nullptr;
 	EnemyGenerator* m_enemygenerator = nullptr;
 	Enemy2Generator* m_enemy2generator = nullptr;
+	int m_deleteClearCount = 0;
+	bool m_clear = false;
 	
 
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
