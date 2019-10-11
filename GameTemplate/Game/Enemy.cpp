@@ -74,21 +74,22 @@ void Enemy::Update()
 		}
 
 }
+	Game* mm_game = FindGO<Game>("game");
 
 	CVector3 diff = m_player->m_position - m_position;
 	if (diff.Length() < 10.0f) {
 		DeleteGO(this);
-		//mm_game->m_deleteClearCount++;
+		mm_game->m_deleteClearCount++;
 	}
 	CVector3 diff2 = m_player2->m_position - m_position;
 	if (diff2.Length() < 10.0f) {
 		DeleteGO(this);
-		//mm_game->m_deleteClearCount++;
+		mm_game->m_deleteClearCount++;
 	}
 	CVector3 diff3 = m_player3->m_position - m_position;
 	if (diff3.Length() < 10.0f) {
 		DeleteGO(this);
-		//mm_game->m_deleteClearCount++;
+		mm_game->m_deleteClearCount++;
 	}
 
 	//座標をスキンモデルレンダラーに反映させる。
