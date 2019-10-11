@@ -12,7 +12,7 @@ CVector3 targetPoints[9] = {
 	{-104.21f,0.0f,-150.000f},
 	{92.754f,0.0f,-150.000f},
 	{92.103f,0.0f,102.487f},
-	{-25.934f,0.0f,104.277f},
+	{-25.934f,0.0f,80.000f},
 	{-0.25f,0.0f,-10.000f},
 
 };
@@ -57,15 +57,15 @@ void Enemy2::Update()
 	toNext.Normalize();
 	m_position += toNext * 10.f;
 	CVector3 diff = m_player->m_position - m_position;
-	if (diff.Length() < 10.0f) {
+	if (diff.Length() < 100.0f) {
 		DeleteGO(this);
 	}
 	CVector3 diff2 = m_player2->m_position - m_position;
-	if (diff2.Length() < 10.0f) {
+	if (diff2.Length() < 100.0f) {
 		DeleteGO(this);
 	}
 	CVector3 diff3 = m_player3->m_position - m_position;
-	if (diff3.Length() < 10.0f) {
+	if (diff3.Length() < 100.0f) {
 		DeleteGO(this);
 	}
 	
