@@ -4,6 +4,7 @@
 #include "Enemy2.h"
 #include "TakaraBako.h"
 #include "EnemyGenerator.h"
+#include "Enemy2Generator.h"
 #include "tkEngine/light/tkDirectionLight.h"
 
 Game::Game()
@@ -14,9 +15,8 @@ Game::Game()
 	m_player2 = NewGO<Player2>(0, "player2");
 	m_player3 = NewGO<Player3>(0,"player3");
 	m_takarabako = NewGO<TakaraBako>(0);
-	//m_enemy2 = NewGO<Enemy2>(0);
-	NewGO<EnemyGenerator>(0);
-	
+	m_enemygenerator = NewGO<EnemyGenerator>(0);
+	m_enemy2generator = NewGO<Enemy2Generator>(0);
 }
 
 Game::~Game()
@@ -38,6 +38,7 @@ void Game::Update()
 
 	if (takarabako == 0)
 	{
+		//スプライトレンダーのインスタンスを作成
 		m_spritRender = NewGO<prefab::CSpriteRender>(0);
 		//タイトル画面のロード
 		//m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
