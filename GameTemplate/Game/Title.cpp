@@ -118,7 +118,7 @@ void Title::Update()
 		//asioto.wav
 		sound->Init(L"../Assets/sound/asioto.wav");
 		//‚¤‚é‚³‚¢‚Ì‚Å‰¹‚ð¬‚³‚­‚·‚é
-		//sound->SetVolume(0.05f);
+		sound->SetVolume(1.5f);
 		//ƒƒ“ƒVƒ‡ƒbƒgÄ¶
 		sound->Play(false);
 

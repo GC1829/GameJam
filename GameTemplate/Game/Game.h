@@ -31,6 +31,7 @@ public:
 	TakaraBako* m_takarabako = nullptr;
 	EnemyGenerator* m_enemygenerator = nullptr;
 	Enemy2Generator* m_enemy2generator = nullptr;
+	prefab::CSoundSource* m_sound = nullptr;
 	int m_deleteClearCount = 0;
 	bool m_clear = false;
 	int m_timer = 0;
@@ -43,5 +44,7 @@ public:
 	CVector3 position = {0, 0, 0};
 
 	int takarabako = 1;
+	
+	int o = 0;
 };
 
