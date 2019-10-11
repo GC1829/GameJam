@@ -12,6 +12,8 @@
 #include "Player2.h"
 #include "Player3.h"
 #include "TakaraBako.h"
+#include "Enemy2Generator.h"
+#include "EnemyGenerator.h"
 class Game : public IGameObject
 {
 public:
@@ -27,7 +29,8 @@ public:
 	Enemy2* m_enemy2 = nullptr;
 	Enemy* m_enemy = nullptr;
 	TakaraBako* m_takarabako = nullptr;
-	
+	EnemyGenerator* m_enemygenerator = nullptr;
+	Enemy2Generator* m_enemy2generator = nullptr;
 	
 
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。

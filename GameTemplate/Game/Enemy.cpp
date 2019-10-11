@@ -37,8 +37,9 @@ bool Enemy::Start()
 	//スキンモデルに回転クォータニオンを設定する
 	CQuaternion qRot;
 	m_skinModelRender->SetRotation(qRot);
-	m_player = FindGO<Player>(0, "player");
-
+	m_player = FindGO<Player>("player");
+	m_player2 = FindGO<Player2>("player2");
+	m_player3 = FindGO<Player3>("player3");
 	return true;
 }
 
@@ -71,6 +72,18 @@ void Enemy::Update()
 		}
 
 }
+	CVector3 diff = m_player->m_position - m_position;
+	if (diff.Length() < 100.0f) {
+		DeleteGO(this);
+	}
+	CVector3 diff2 = m_player2->m_position - m_position;
+	if (diff2.Length() < 100.0f) {
+		DeleteGO(this);
+	}
+	CVector3 diff3 = m_player3->m_position - m_position;
+	if (diff3.Length() < 100.0f) {
+		DeleteGO(this);
+	}
 	//座標をスキンモデルレンダラーに反映させる。
 	m_skinModelRender->SetPosition(m_position);
 }
