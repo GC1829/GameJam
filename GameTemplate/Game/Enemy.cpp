@@ -31,7 +31,7 @@ bool Enemy::Start()
 {
 	//壁にぶつかったら方向転換する+時々止まるエネミー
 	//スキンモデルレンダーのインスタンスの作成
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
+	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	//スキンモデルレンダーのロード
 	m_skinModelRender->Init(L"../Assets/modelData/Enemy1.cmo");
 	m_skinModelRender->SetScale({ 10.0f, 10.0f, 10.0f });

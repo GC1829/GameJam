@@ -29,7 +29,7 @@ Enemy2::~Enemy2()
 bool Enemy2::Start()
 {
 	//壁にぶつかったら方向転換するだけのエネミー
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy2");
+	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/Enemy2.cmo");
 	m_position = { -1000.0f, 0.0f, 1400.0f };
 	m_skinModelRender->SetPosition(m_position);

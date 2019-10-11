@@ -28,19 +28,39 @@ void TakaraBako::Update()
 	//	m_game->takarabako--;
 	//}
 
-	//Game* game = FindGO<Game>("game");
-	//Enemy* enemy = FindGO<Enemy>("enemy");
+	Game* game = FindGO<Game>("game");
+	/*Enemy* enemy = FindGO<Enemy>("enemy");
+	Enemy2* enemy2 = FindGO<Enemy2>("enemy2");*/
+	QueryGOs<Enemy>("enemy", [&](Enemy* ene)->bool {
+		CVector3 diff = ene->m_position - m_position;
+		if (diff.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
+
+			game->takarabako--;
+			DeleteGO(this);
+		}
+		return false;
+		});
 	//CVector3 diff = enemy->m_position - m_position;
 	//if (diff.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
 
-	//	m_game->takarabako--;
+	//	game->takarabako--;
 	//}
-	//Enemy2* enemy2 = FindGO<Enemy2>("enemy2");
-	//	CVector3 diff2 = enemy2->m_position - m_position;
-	//	if (diff2.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
+	
+	QueryGOs<Enemy2>("enemy2", [&](Enemy2* ene2)->bool {
+		CVector3 diff2 = ene2->m_position - m_position;
+		if (diff2.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
 
-	//		m_game->takarabako--;
-	//	}
+			game->takarabako--;
+			DeleteGO(this);
+		}
+		return false;
+		});
+
+		//CVector3 diff2 = enemy2->m_position - m_position;
+		//if (diff2.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
+
+		//	game->takarabako--;
+		//}
 		m_skinModelRender->SetPosition(m_position);
 		
 }
