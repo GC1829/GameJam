@@ -31,7 +31,7 @@ bool Enemy::Start()
 {
 	//壁にぶつかったら方向転換する+時々止まるエネミー
 	//スキンモデルレンダーのインスタンスの作成
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0, "enemy");
+	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	//スキンモデルレンダーのロード
 	m_skinModelRender->Init(L"../Assets/modelData/Enemy1.cmo");
 	m_skinModelRender->SetScale({ 10.0f, 10.0f, 10.0f });
@@ -41,7 +41,6 @@ bool Enemy::Start()
 	m_player = FindGO<Player>("player");
 	m_player2 = FindGO<Player2>("player2");
 	m_player3 = FindGO<Player3>("player3");
-	//m_game = FindGO<Game>("game");
 	return true;
 }
 
@@ -56,7 +55,7 @@ void Enemy::Update()
 			m_targetPointNo1++;
 		}
 		toNext.Normalize();
-		m_position += toNext * 10.f;
+		m_position += toNext * 20.f;
 		Count++;
 
 		if (Count == 50) {

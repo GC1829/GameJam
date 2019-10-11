@@ -6,6 +6,7 @@
 #include "Enemy2Generator.h"
 #include "TakaraBako.h"
 #include "tkEngine/light/tkDirectionLight.h"
+#include <Title.h>
 
 Game::Game()
 {
@@ -15,13 +16,20 @@ Game::Game()
 	m_player2 = NewGO<Player2>(0, "player2");
 	m_player3 = NewGO<Player3>(0,"player3");
 	m_takarabako = NewGO<TakaraBako>(0);
-	NewGO<EnemyGenerator>(0);
-	NewGO <Enemy2Generator>(0);
+	m_enemygenerator = NewGO<EnemyGenerator>(0);
+	m_enemy2generator = NewGO <Enemy2Generator>(0);
 }
 
 Game::~Game()
 {
-	DeleteGO(m_enemy);
+	DeleteGO(m_map);
+	DeleteGO(m_takarabako);
+	DeleteGO(m_player);
+	DeleteGO(m_player2);
+	DeleteGO(m_player3);
+	DeleteGO(m_spritRender);
+	DeleteGO(m_skinModelRender);
+	DeleteGO(m_enemy2);
 }
 bool Game::Start()
 {
@@ -93,11 +101,23 @@ void Game::Update()
 	//	m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
 	//}
 
+
 	if (m_clear == false) {
-		if (m_deleteClearCount == 3) {
+		//クリアしていない時
+		if (m_deleteClearCount == 10) {
 			m_clear = true;
 			m_spritRender = NewGO<prefab::CSpriteRender>(0);
 			m_spritRender->Init(L"sprite/GAMECLAER.dds",712, 65);
+		}
+	}
+
+	else {
+		//クリアしている。時
+		m_timer++;
+		if (m_timer == 240) {
+			//240フレーム経過したらタイトル画面に戻る。
+			NewGO<Title>(0);
+			DeleteGO(this);
 		}
 	}
 }
