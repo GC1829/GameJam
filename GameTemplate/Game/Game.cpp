@@ -51,6 +51,7 @@ void Game::Update()
 		//タイトル画面のロード
 		m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
 	}
+
 	//QueryGOs<Enemy>("enemy", [&](Enemy* enemy) {
 	//	//壁に潰されたときにEnemyを消す
 
