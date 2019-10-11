@@ -11,4 +11,6 @@ class Player3 :public IGameObject
 		CVector3 m_scale = CVector3::Zero;
 		CVector3 m_movespeed = CVector3::Zero;
 		CCharacterController m_Characon;
+		int Flag = 0;
+		int Count = 0;
 };

@@ -27,11 +27,20 @@ bool Player3::Start()
 
 void Player3::Update()
 {
-	if (Pad(0).IsPress(enButtonB)) {
-		m_position.z += 50.0f;
+	if (Flag == 0) {
+		if (Pad(0).IsPress(enButtonB)) {
+			m_position.z = 900.0f;
+		}
+		Count++;
 	}
-	if (Pad(0).IsPress(enButtonY)) {
-		m_position.z -= 50.0f;
+	if (Count == 30)
+	{
+		Flag = 1;
+		Count = 0;
+	}
+	if (Flag == 1) {
+		m_position.z = 600.0f;
+		Flag = 0;
 	}
 	m_skinModelRender->SetPosition(m_position);
 }
