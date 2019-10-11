@@ -28,6 +28,8 @@ bool Title::Start()
 	return true;
 }
 
+
+
 void Title::Update()
 {
 	m_fontRender->SetColor(Color);
@@ -93,9 +95,22 @@ void Title::Update()
 			Colorjoutai = 0;
 		}
 	}
-	
-	
-	
+
+	if (j_scale == 0) {
+		scale += 0.005f;
+		if (scale >= 2.0f) {
+			j_scale = 1;
+		}
+
+	}
+	if (j_scale == 1) {
+		scale -= 0.005f;
+		if (scale <= 1.0f) {
+			j_scale = 0;
+		}
+	}
+
+	m_fontRender->SetScale(scale);
 
 	if (Pad(0).IsPressAnyKey()) {
 
