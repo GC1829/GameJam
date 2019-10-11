@@ -1839,6 +1839,10 @@
     <Media Include="Assets\sound\asioto.wav" />
     <Media Include="Assets\sound\SandSound.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\GAMECLAER.dds" />
+    <Image Include="Assets\sprite\GAMEOVER.dds" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />

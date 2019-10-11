@@ -4,6 +4,7 @@
 #include "Player3.h"
 #include "Player2.h"
 #include "EnemyGenerator.h"
+#include "Game.h"
 
 CVector3 targetPoints1[9] = {
 	{-195.300f, 0.0f, -195.000f},
@@ -13,7 +14,7 @@ CVector3 targetPoints1[9] = {
 	{-104.21f,0.0f,-150.000f},
 	{92.754f,0.0f,-150.000f},
 	{92.103f,0.0f,102.487f},
-	{-25.934f,0.0f,104.277f},
+	{-24.000f,0.0f,80.000f},
 	{-0.25f,0.0f,-10.000f}
 };
 
@@ -77,15 +78,19 @@ void Enemy::Update()
 	CVector3 diff = m_player->m_position - m_position;
 	if (diff.Length() < 100.0f) {
 		DeleteGO(this);
+		//mm_game->m_deleteClearCount++;
 	}
 	CVector3 diff2 = m_player2->m_position - m_position;
 	if (diff2.Length() < 100.0f) {
 		DeleteGO(this);
+		//mm_game->m_deleteClearCount++;
 	}
 	CVector3 diff3 = m_player3->m_position - m_position;
 	if (diff3.Length() < 100.0f) {
 		DeleteGO(this);
+		//mm_game->m_deleteClearCount++;
 	}
+
 	//座標をスキンモデルレンダラーに反映させる。
 	m_skinModelRender->SetPosition(m_position);
 }
