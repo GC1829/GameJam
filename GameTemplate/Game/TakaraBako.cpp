@@ -43,7 +43,7 @@ void TakaraBako::Update()
 	//CVector3 diff = enemy->m_position - m_position;
 	//if (diff.Length() < 100.0f /*&& diff2.Length() < 100.0f*/) {
 
-	//	game->takarabako--;
+	//	m_game->takarabako--;
 	//}
 	
 	QueryGOs<Enemy2>("enemy2", [&](Enemy2* ene2)->bool {
