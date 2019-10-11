@@ -93,13 +93,13 @@ void Game::Update()
 	//	m_spritRender->Init(L"../Assets/Sprite/GAMEOVER.dds", 1280.0f, 720.0f);
 	//}
 
-	/*if (m_clear == false) {
+	if (m_clear == false) {
 		if (m_deleteClearCount == 3) {
 			m_clear = true;
 			m_spritRender = NewGO<prefab::CSpriteRender>(0);
 			m_spritRender->Init(L"sprite/GAMECLAER.dds",712, 65);
 		}
-	}*/
+	}
 }
 
 
