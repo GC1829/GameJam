@@ -41,6 +41,7 @@ bool Enemy::Start()
 	m_player = FindGO<Player>("player");
 	m_player2 = FindGO<Player2>("player2");
 	m_player3 = FindGO<Player3>("player3");
+	//m_game = FindGO<Game>("game");
 	return true;
 }
 
@@ -73,8 +74,7 @@ void Enemy::Update()
 		}
 
 }
-	Game* mm_game = FindGO<Game>("game");
-	
+
 	CVector3 diff = m_player->m_position - m_position;
 	if (diff.Length() < 10.0f) {
 		DeleteGO(this);
