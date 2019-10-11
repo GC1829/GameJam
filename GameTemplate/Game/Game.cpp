@@ -15,8 +15,7 @@ Game::Game()
 	m_player2 = NewGO<Player2>(0, "player2");
 	m_player3 = NewGO<Player3>(0,"player3");
 	m_takarabako = NewGO<TakaraBako>(0);
-	m_enemygenerator = NewGO<EnemyGenerator>(0);
-	m_enemy2generator = NewGO<Enemy2Generator>(0);
+	
 }
 
 Game::~Game()
